@@ -6,6 +6,12 @@ biomasa_brac <- function(long) {
   vol
 }
 
+biomasa_fili <- function(long) {
+  long <- long/1000   # paso a mm
+  b <- 0.5 * long
+  vol <- 0.52 * long * b^2
+  vol
+}
 
 #' Title
 #'
@@ -20,8 +26,13 @@ biomasa_brac <- function(long) {
 #' zoobiomass("brac", long)
 zoobiomass <- function(especie, long) {
 
-  if (especie=="brac") {
-    biomasa_brac(long)
-
+  if (especie=="Brachionus") {
+    volumen <- biomasa_brac(long)
   }
+
+  if (especie=="Filinia") {
+    volumen <- biomasa_fili(long)
+  }
+  volumen
+
 }
