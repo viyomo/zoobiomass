@@ -2,18 +2,20 @@
 % Please edit documentation in R/biomassify.R
 \name{biomassify}
 \alias{biomassify}
-\title{Title}
+\title{Calcula el peso seco}
 \usage{
-biomassify(especie, long)
+biomassify(especie, long, k = 0.1)
 }
 \arguments{
 \item{especie}{cadena}
 
 \item{long}{longitud}
+
+\item{k}{porcentage sin agua}
 }
 \value{
 volumen
 }
 \description{
-Title
+Calcula el peso seco
 }
