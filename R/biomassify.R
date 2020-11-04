@@ -2,7 +2,7 @@ biomasa_brac <- function(long, k) {
   b <- 0.6 * long
   c <- 0.4 * long
   vol <- (0.52 * long * b *c)/1000000
-  ps <- vol * k + vol/100
+  ps <- vol * k
   ps
 }
 
@@ -60,13 +60,120 @@ biomasa_asplac <- function(long, k) {
   ps
 }
 
-biomasa_nauplii <- function(long, k) {
-  c <- 0.7 * long
-  b <- c
-  vol <- (0.52 * long * b^2)/1000000
-  ps <-   vol*k
+biomasa_nau_cyclo <- function(long, k) {#evaluar los nombres de los nauplis
+  b <- 0.000011
+  ps <- b * long^1.89
   ps
 }
+
+biomasa_nau_cala <- function(long, k) {#evaluar los nombres de los nauplis
+  b <- 0.000011
+  ps <- b * long^1.89
+  ps
+}
+
+biomasa_nau_harpa <- function(long, k) {#evaluar los nombres de los nauplis
+  b <- 0.000011
+  ps <- b * long^1.89
+  ps
+}
+
+biomasa_cope_cyclo <- function(long, k) {#evaluar los nombres de los nauplis
+  b <- 0.000011
+  ps <- b * long^1.89
+  ps
+}
+
+biomasa_cope_cala <- function(long, k) {#evaluar los nombres de los nauplis
+  b <- 0.000011
+  ps <- b * long^1.89
+  ps
+}
+
+biomasa_cope_harpa <- function(long, k) {#evaluar los nombres de los nauplis
+  b <- 0.000011
+  ps <- b * long^1.89
+  ps
+}
+
+biomasa_cyclo <- function(long, k) {#evaluar los nombres de los adultos de copepodos
+  b <- 0.00000011
+  ps <- b * long^2.59
+  ps
+}
+
+biomasa_cala <- function(long, k) {#evaluar los nombres de los adultos de copepodos
+  b <-long/1000
+  c <- 0.0077 * b^2.33
+  ps <- c * 1000
+  ps
+}
+
+biomasa_harpa <- function(long, k) {#evaluar los nombres de los adultos de copepodos
+  b <-long/1000
+  ps <- 12.51 * b^4.4
+  ps
+}
+
+biomasa_bosmi <- function(long, k) {
+  b <-long/1000
+  c <- 2.7116 + (2.5294 * log(b))
+  ps <- exp(c)
+  ps
+}
+
+biomasa_moina <- function(long, k) {
+  b <-long/1000
+  ps <- 6.61 * b^2.57
+  ps
+}
+
+biomasa_diapha <- function(long, k) {
+  b <-long/1000
+  c <- 1.6242 + (3.0468 * log(b))
+  ps <- exp(c)
+  ps
+}
+
+biomasa_daphnia <- function(long, k) {
+  b <-long/1000
+  c <- 1.0727 + (2.0915 * log(b))
+  ps <- exp(c)
+  ps
+}
+
+biomasa_cerioda <- function(long, k) {
+  b <-long/1000
+  c <- 2.5623 + (3.338 * log(b))
+  ps <- exp(c)
+  ps
+}
+
+biomasa_alona <- function(long, k) {
+  b <-long/1000
+  ps <- 29.65 * b^3.48
+  ps
+}
+
+biomasa_coronatella <- function(long, k) {
+  b <-long/1000
+  ps <- 29.65 * b^3.48
+  ps
+}
+
+biomasa_leydi <- function(long, k) {
+  b <-long/1000
+  ps <- 15.92 * b^3.84
+  ps
+}
+
+biomasa_macro <- function(long, k) {
+  b <-long
+  ps <- (1.903 * 10^-6) * b^2.13
+  ps
+}
+
+
 #' Calcula el peso seco
 #'
 #' @param especie cadena
@@ -81,15 +188,15 @@ biomasa_nauplii <- function(long, k) {
 biomassify <- function(especie, long, k = 0.1) {
 
   if (stringr::str_detect(especie,"Brachionus")) {
-    volumen <- biomasa_brac(long, k)
+    pseco <- biomasa_brac(long, k)
   }
 
   else if (stringr::str_detect(especie,"Filinia")) {
-    volumen <- biomasa_fili(long, k)
+    pseco <- biomasa_fili(long, k)
   }
 
   else if (stringr::str_detect(especie,"Keratella")) {
-    volumen <- biomasa_kera(long, k)
+    pseco <- biomasa_kera(long, k)
   }
 
   else if (stringr::str_detect(especie,"Polyarthra")) {
@@ -111,6 +218,79 @@ biomassify <- function(especie, long, k = 0.1) {
   else if (stringr::str_detect(especie,"Asplachna")) {
     pseco <- biomasa_asplac(long, k)
   }
+
+  else if (stringr::str_detect(especie,"Cyclopoida")) {  #evaluar los nombres de los nauplii
+    pseco <- biomasa_nau_cyclo(long, 1)
+  }
+
+  else if (stringr::str_detect(especie,"Calanoida")) {  #evaluar los nombres de los nauplii
+    pseco <- biomasa_nau_cala(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Harpacticoida")) {  #evaluar los nombres de los nauplii
+    pseco <- biomasa_nau_harpa(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Cyclopoida")) {   #evaluar los nombres de los copepoditos
+    pseco <- biomasa_cope_cyclo(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Calanoida")) {    #evaluar los nombres de los copepoditos
+    pseco <- biomasa_cope_cala(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Harpacticoida")) {    #evaluar los nombres de los copepoditos
+    pseco <- biomasa_cope_harpa(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Cyclopoida")) {    #evaluar los nombres de los copepoditos
+    pseco <- biomasa_cyclo(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Calanoida")) {    #evaluar los nombres de los copepoditos
+    pseco <- biomasa_cala(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Harpacticoida")) {    #evaluar los nombres de los copepoditos
+    pseco <- biomasa_harpa(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Bosmina")) {
+    pseco <- biomasa_bosmi(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Moina")) {
+    pseco <- biomasa_moina(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Diaphanosoma")) {
+    pseco <- biomasa_diapha(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Daphnia")) {
+    pseco <- biomasa_daphnia(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Ceriodaphnia")) {
+    pseco <- biomasa_cerioda(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Alona")) {
+    pseco <- biomasa_alona(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Coronatella")) {
+    pseco <- biomasa_coronatella(long, 1)
+  }
+
+  else if (stringr::str_detect(especie,"Leydigia")) {
+    pseco <- biomasa_leydi(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Macrothrix")) {
+    pseco <- biomasa_macro(long, 1)
+}
+
 
   else {
     pseco <- 0
