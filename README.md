@@ -15,7 +15,7 @@ You can install the released version of zooplankton from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("zooplankton")
+devtools::install_github("viyomo/zooplankton")
 ```
 
 ## Example
