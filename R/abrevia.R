@@ -1,11 +1,3 @@
-#' Title
-#'
-#' @param genero cadena
-#'
-#' @return abreviatura
-#' @export
-#'
-# @examples
 abrevia <- function(generos){
 
   genero <- stringr::str_split_fixed(generos, " ", n=2)[1]
@@ -18,4 +10,17 @@ abrevia <- function(generos){
   }
   ab
 
+}
+
+#' Title
+#'
+#' @param lista lista de nombres
+#'
+#' @return lista de abreviatura
+#' @export
+#'
+# @examples
+abbrevify <- function(lista) {
+  r <- sapply(lista, abrevia)
+  r
 }
