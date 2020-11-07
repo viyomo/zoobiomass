@@ -187,107 +187,107 @@ biomasa_macro <- function(long, k) {
 
 biomassify <- function(especie, long, k = 0.1) {
 
-  if (stringr::str_detect(especie,"Brac")) {#aun no lo he cambiado
+  if (stringr::str_detect(especie,"Brac")) {   #ya
     pseco <- biomasa_brac(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Fili")) {
+  else if (stringr::str_detect(especie,"Fili")) {  #ya
     pseco <- biomasa_fili(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Kera")) {
+  else if (stringr::str_detect(especie,"Kera")) {  #ya
     pseco <- biomasa_kera(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Poly")) {
+  else if (stringr::str_detect(especie,"Poly")) { #ya
     pseco <- biomasa_polyar(long, k)
 }
 
-  else if (stringr::str_detect(especie,"Pomp")) {
+  else if (stringr::str_detect(especie,"Pomp")) {#ya
     pseco <- biomasa_pompho(long, k)
 }
 
-  else if (stringr::str_detect(especie,"Test")) {
+  else if (stringr::str_detect(especie,"Test")) { #ya
     pseco <- biomasa_testu(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Noth")) {
+  else if (stringr::str_detect(especie,"Noth")) {  #ya
     pseco <- biomasa_notho(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Aspla")) {
+  else if (stringr::str_detect(especie,"Aspl")) {   #ya
     pseco <- biomasa_asplac(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Cyclopoida")) {  #evaluar los nombres de los nauplii
+  else if (stringr::str_detect(especie,"Cycl.naup")) {  #ya
     pseco <- biomasa_nau_cyclo(long, 1)
   }
 
-  else if (stringr::str_detect(especie,"Calanoida")) {  #evaluar los nombres de los nauplii
+  else if (stringr::str_detect(especie,"Cala.naup")) {  #ya
     pseco <- biomasa_nau_cala(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Harpacticoida")) {  #evaluar los nombres de los nauplii
+  else if (stringr::str_detect(especie,"Harp.naup")) {  #ya
     pseco <- biomasa_nau_harpa(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Cyclopoida")) {   #evaluar los nombres de los copepoditos
+  else if (stringr::str_detect(especie,"Cycl.cope")) {   #ya
     pseco <- biomasa_cope_cyclo(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Calanoida")) {    #evaluar los nombres de los copepoditos
+  else if (stringr::str_detect(especie,"Cala.cope")) {    #ya
     pseco <- biomasa_cope_cala(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Harpacticoida")) {    #evaluar los nombres de los copepoditos
+  else if (stringr::str_detect(especie,"Harp.cope")) {    #ya
     pseco <- biomasa_cope_harpa(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Cyclopoida")) {    #evaluar los nombres de los copepoditos
+  else if (stringr::str_detect(especie,"Cyclopoi")) {  #ya
     pseco <- biomasa_cyclo(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Calanoida")) {    #evaluar los nombres de los copepoditos
+  else if (stringr::str_detect(especie,"Calanoid")) { #ya
     pseco <- biomasa_cala(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Harpacticoida")) {    #evaluar los nombres de los copepoditos
+  else if (stringr::str_detect(especie,"Harpacti")) { #ya
     pseco <- biomasa_harpa(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Bosmina")) {
+  else if (stringr::str_detect(especie,"Bosmina")) { #ya
     pseco <- biomasa_bosmi(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Moina")) {
+  else if (stringr::str_detect(especie,"Moina")) { #ya
     pseco <- biomasa_moina(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Diaphano")) {
+  else if (stringr::str_detect(especie,"Diaphano")) {  #ya
     pseco <- biomasa_diapha(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Daphn")) {
+  else if (stringr::str_detect(especie,"Daphnia")) {   #ya
     pseco <- biomasa_daphnia(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Ceri")) {
+  else if (stringr::str_detect(especie,"Ceriodap")) {#ya
     pseco <- biomasa_cerioda(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Alon")) {
+  else if (stringr::str_detect(especie,"Alon")) {   #ya
     pseco <- biomasa_alona(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Coro")) {
+  else if (stringr::str_detect(especie,"Coro")) {  #ya
     pseco <- biomasa_coronatella(long, 1)
   }
 
-  else if (stringr::str_detect(especie,"Leyd")) {
+  else if (stringr::str_detect(especie,"Leyd")) { #ya
     pseco <- biomasa_leydi(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Macr")) {
+  else if (stringr::str_detect(especie,"Macr")) {  #ya
     pseco <- biomasa_macro(long, 1)
 }
 
