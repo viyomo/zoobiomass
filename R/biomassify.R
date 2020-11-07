@@ -173,6 +173,12 @@ biomasa_macro <- function(long, k) {
   ps
 }
 
+biomasa_ovalona <- function(long, k) {
+  b <-long/1000
+  ps <- 29.65 * b^3.48
+  ps
+}
+
 
 #' Calcula el peso seco
 #'
@@ -289,6 +295,10 @@ biomassify <- function(especie, long, k = 0.1) {
 
   else if (stringr::str_detect(especie,"Macr")) {  #ya
     pseco <- biomasa_macro(long, 1)
+}
+
+  else if (stringr::str_detect(especie,"Oval")) {  #ya
+    pseco <- biomasa_ovalona(long, 1)
 }
 
 
