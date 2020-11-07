@@ -187,35 +187,35 @@ biomasa_macro <- function(long, k) {
 
 biomassify <- function(especie, long, k = 0.1) {
 
-  if (stringr::str_detect(especie,"Brachionus")) {
+  if (stringr::str_detect(especie,"Brac")) {#aun no lo he cambiado
     pseco <- biomasa_brac(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Filinia")) {
+  else if (stringr::str_detect(especie,"Fili")) {
     pseco <- biomasa_fili(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Keratella")) {
+  else if (stringr::str_detect(especie,"Kera")) {
     pseco <- biomasa_kera(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Polyarthra")) {
+  else if (stringr::str_detect(especie,"Poly")) {
     pseco <- biomasa_polyar(long, k)
 }
 
-  else if (stringr::str_detect(especie,"Pompholyx")) {
+  else if (stringr::str_detect(especie,"Pomp")) {
     pseco <- biomasa_pompho(long, k)
 }
 
-  else if (stringr::str_detect(especie,"Testudinella")) {
+  else if (stringr::str_detect(especie,"Test")) {
     pseco <- biomasa_testu(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Notholca")) {
+  else if (stringr::str_detect(especie,"Noth")) {
     pseco <- biomasa_notho(long, k)
   }
 
-  else if (stringr::str_detect(especie,"Asplachna")) {
+  else if (stringr::str_detect(especie,"Aspla")) {
     pseco <- biomasa_asplac(long, k)
   }
 
@@ -263,31 +263,31 @@ biomassify <- function(especie, long, k = 0.1) {
     pseco <- biomasa_moina(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Diaphanosoma")) {
+  else if (stringr::str_detect(especie,"Diaphano")) {
     pseco <- biomasa_diapha(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Daphnia")) {
+  else if (stringr::str_detect(especie,"Daphn")) {
     pseco <- biomasa_daphnia(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Ceriodaphnia")) {
+  else if (stringr::str_detect(especie,"Ceri")) {
     pseco <- biomasa_cerioda(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Alona")) {
+  else if (stringr::str_detect(especie,"Alon")) {
     pseco <- biomasa_alona(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Coronatella")) {
+  else if (stringr::str_detect(especie,"Coro")) {
     pseco <- biomasa_coronatella(long, 1)
   }
 
-  else if (stringr::str_detect(especie,"Leydigia")) {
+  else if (stringr::str_detect(especie,"Leyd")) {
     pseco <- biomasa_leydi(long, 1)
 }
 
-  else if (stringr::str_detect(especie,"Macrothrix")) {
+  else if (stringr::str_detect(especie,"Macr")) {
     pseco <- biomasa_macro(long, 1)
 }
 
