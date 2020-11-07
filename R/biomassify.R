@@ -16,7 +16,7 @@ biomasa_fili <- function(long, k) {
 biomasa_kera <- function(long, k) {
   b <- 0.7 * long
   c <- 0.33 * long
-  vol <- (long * b * c) / 1000000
+  vol <- (long * b * c) /1000000
   ps <- vol * k
   ps
 }
@@ -24,7 +24,7 @@ biomasa_kera <- function(long, k) {
 biomasa_polyar <- function(long, k) {
   b <- 0.7 * long
   c <- 0.4 * long
-  vol <- (long * b * c) / 1000000
+  vol <- (long * b * c) /1000000
   ps <- vol *k
   ps
 }
@@ -40,7 +40,7 @@ biomasa_pompho <- function(long, k) {
 biomasa_testu <- function(long, k) {
   b <- long
   c <- 0.2 * long
-  vol <- (0.4 * long * b * c) / 1000000
+  vol <- (0.4 * long * b * c) /1000000
   ps <-   vol * k
   ps
 }
@@ -48,7 +48,7 @@ biomasa_testu <- function(long, k) {
 biomasa_notho <- function(long, k) {
   b <- 0.4 * long
   c <- 0.2 * long
-  vol <- (0.13 * (3 * long * b * c) + 4 * c^3) / 1000000
+  vol <- (0.13 * (3 * long * b * c) + 4 * c^3) /1000000
   ps <- vol *k
   ps
 }
@@ -191,7 +191,7 @@ biomasa_ovalona <- function(long, k) {
 #'
 # @examples
 
-biomassify <- function(especie, long, k = 0.11) {
+biomassify <- function(especie, long, k = 0.1) {
 
   if (stringr::str_detect(especie,"Brac")) {   #ya
     pseco <- biomasa_brac(long, k)
