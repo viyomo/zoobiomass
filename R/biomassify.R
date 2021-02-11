@@ -221,7 +221,7 @@ biomassify <- function(especie, long, k = 0.1) {
     pseco <- biomasa_notho(long, k)
   }
 
-  else if (all(stringr::str_detect(especie,"Aspl"))) {   #ya
+  else if (all(stringr::str_detect(especie,"Aspl"))) {   #ya ##print(biomassify("Aspl", 455))
     pseco <- biomasa_asplac(long, k)
   }
 
