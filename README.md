@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-The goal of zooplankton is to …
+The package works with two functions (abbrevify.Rd and biomassify.Rd). The goal is to continue its development. 
 
 ## Installation
 
