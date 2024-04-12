@@ -308,4 +308,5 @@ biomassify <- function(especie, long, k = 0.1) {
   return(pseco)
 
 }
+biomassify <- Vectorize(biomassify)
 
