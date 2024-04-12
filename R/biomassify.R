@@ -191,7 +191,7 @@ biomasa_ovalona <- function(long, k) {
 #'
 # @examples
 
-biomassify <- Vectorize(function(especie, long, k = 0.1) {
+biomassify <- function(especie, long, k = 0.1) {
 
   if (all(stringr::str_detect(especie,"Brac"))) {   #ya
     pseco <- biomasa_brac(long, k)
@@ -307,5 +307,5 @@ biomassify <- Vectorize(function(especie, long, k = 0.1) {
   }
   return(pseco)
 
-})
+}
 
