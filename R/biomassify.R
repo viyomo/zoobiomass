@@ -305,7 +305,7 @@ biomassify <- function(especie, long, k = 0.1) {
   else {
     pseco <- 0
   }
-  #pseco
+  return pseco
 
 }
 
